@@ -52,6 +52,7 @@ def play(playlist)
     if track.include?(input) || track.downcase.include?(input)
       puts "Playing #{track}."
     end
+  end
   else
     puts "Invalid input, please try again"
   end
