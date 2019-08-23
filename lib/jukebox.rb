@@ -49,7 +49,7 @@ def play(playlist)
   if input.to_i >= 1 && input.to_i <= playlist.length 
     puts "Playing #{playlist[input.to_i - 1]}."
   elsif playlist.include?(input) do |track|
-    if track.include?(input) || track.downcase.include?(input)
+    if track.include?(input)
       puts "Playing #{track}."
     end
   end
