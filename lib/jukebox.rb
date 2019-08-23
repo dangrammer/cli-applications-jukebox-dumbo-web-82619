@@ -28,31 +28,14 @@ def list(playlist)
 end
 
 
-# def play(playlist)
-#   puts "Please enter a song name or number:"
-#   input = gets.strip
-  
-#   if input.to_i >= 1 && input.to_i <= playlist.length 
-#     puts "Playing #{playlist[input.to_i - 1]}."
-#   elsif playlist.include?(input)
-#     puts "Playing #{playlist.find{|track| track == input}}."
-#   else
-#     puts "Invalid input, please try again"
-#   end
-# end
-
-
 def play(playlist)
   puts "Please enter a song name or number:"
   input = gets.strip
   
   if input.to_i >= 1 && input.to_i <= playlist.length 
     puts "Playing #{playlist[input.to_i - 1]}."
-  elsif playlist.include?(input) do |track|
-    if track.include?(input)
-      puts "Playing #{track}."
-    end
-  end
+  elsif playlist.include?(input)
+    puts "Playing #{playlist.find{|track| track == input}}."
   else
     puts "Invalid input, please try again"
   end
